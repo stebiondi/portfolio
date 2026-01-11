@@ -4,60 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stefano Biondi</title>
+
   <style>
     body {
-      background-color: #000;  /* Black background */
-      color: #fff;             /* White text for contrast */
-      font-family: Consolas, "Courier New", monospace;  /* VS Code-like font */
+      background-color: #000;
+      color: #fff;
+      font-family: Consolas, "Courier New", monospace;
       padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
     }
+
+    h1 {
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      margin-top: 0;
+      opacity: 0.85;
+    }
+
     a {
-      color: #4CAF50; /* green */
+      color: #4CAF50;
       text-decoration: none;
     }
-    a:hover {
+
+    a:hover,
+    a:focus {
       text-decoration: underline;
     }
+
     section {
-      margin-top: 40px;
+      margin-top: 50px;
     }
+
     h2 {
       border-bottom: 1px solid #fff;
-      padding-bottom: 5px;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
     }
+
     ul {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
+
     li {
-      margin: 10px 0;
+      margin: 12px 0;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      opacity: 0.6;
     }
   </style>
 </head>
+
 <body>
-  <h1>Stefano Biondi</h1>
-  <p>Computational Fluid Dynamics – website work in progress</p>
+
+  <header>
+    <h1>Stefano Biondi</h1>
+    <p>Computational Fluid Dynamics. Website work in progress.</p>
+  </header>
 
   <section id="portfolio">
     <h2>Portfolio</h2>
     <ul>
-      <li><a href="resume-2.pdf" target="_blank">Resume</a></li>
-      <li><a href="https://www.linkedin.com/in/stefano-biondi-cfd" target="_blank">LinkedIn</a></li>
-      <li><a href="https://orcid.org/0009-0001-5737-6012" target="_blank">ORCID</a></li>
-      <li><a href="https://www.researchgate.net/profile/Stefano-Biondi-5?ev=hdr_xprf" target="_blank">ResearchGate</a></li>
-      <li><a href="https://pypi.org/project/pyCoastal/" target="_blank">pyCoastal</a></li>
+      <li><a href="resume-2.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/stefano-biondi-cfd" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://orcid.org/0009-0001-5737-6012" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Stefano-Biondi-5" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+      <li><a href="https://pypi.org/project/pyCoastal/" target="_blank" rel="noopener noreferrer">pyCoastal</a></li>
     </ul>
   </section>
 
-  <section id="Publications">
+  <section id="publications">
     <h2>Publications</h2>
     <ul>
-      <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5876812" target="_blank">Salinity Surge Triggers Nitrogen Accumulation in Coastal Lakes</a></li>
-      <li><a href="https://www.researchgate.net/publication/397772776_pyCoastal_a_Python_Tool_for_Coastal_Engineering?channel=doi&linkId=691e39dd08bddf210f768c6b&showFulltext=true" target="_blank">pyCoastal: a Python Tool for Coastal Engineering</a></li>
+      <li>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5876812"
+           target="_blank" rel="noopener noreferrer">
+          Salinity Surge Triggers Nitrogen Accumulation in Coastal Lakes
+        </a>
+      </li>
+      <li>
+        <a href="https://www.researchgate.net/publication/397772776_pyCoastal_a_Python_Tool_for_Coastal_Engineering"
+           target="_blank" rel="noopener noreferrer">
+          pyCoastal: a Python Tool for Coastal Engineering
+        </a>
+      </li>
     </ul>
   </section>
+
+  <footer>
+    © Stefano Biondi
+  </footer>
+
 </body>
 </html>
-  
-
-
