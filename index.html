@@ -11,38 +11,51 @@
   <title>Stefano Biondi</title>
 
   <style>
+    :root {
+      --bg: #0c0c0c;
+      --fg: #33cc33;
+      --bright: #39ff14;
+      --dim: #27b30e;
+      --white: #e5e5e5;
+      --blue: #5c8dff;
+      --magenta: #d670d6;
+      --yellow: #e5c07b;
+    }
+
     body {
       max-width: 700px;
       margin: 0 auto;
       padding: 48px 20px 64px;
-      background: #000000;
-      color: #33cc33;
+      background: var(--bg);
+      color: var(--fg);
       font-family: Consolas, Menlo, "Courier New", monospace;
       font-size: 15px;
       line-height: 1.55;
     }
 
     ::selection {
-      color: #000000;
-      background: #39ff14;
+      color: var(--bg);
+      background: var(--bright);
     }
 
     a {
-      color: #39ff14;
+      color: var(--bright);
     }
 
     a:hover {
-      color: #000000;
-      background: #39ff14;
+      color: var(--bg);
+      background: var(--bright);
     }
 
     h1 {
       margin: 0 0 4px;
+      color: var(--bright);
       font-size: 28px;
     }
 
     h2 {
       margin: 40px 0 12px;
+      color: var(--white);
       font-size: 16px;
     }
 
@@ -59,9 +72,36 @@
       margin-bottom: 14px;
     }
 
-    .prompt,
     .subtitle {
-      color: #27b30e;
+      color: var(--dim);
+    }
+
+    .user {
+      color: var(--bright);
+    }
+
+    .path,
+    a.dir {
+      color: var(--blue);
+    }
+
+    .cmd {
+      color: var(--white);
+      font-weight: normal;
+    }
+
+    a.file {
+      color: var(--magenta);
+    }
+
+    a.dir:hover {
+      color: var(--bg);
+      background: var(--blue);
+    }
+
+    a.file:hover {
+      color: var(--bg);
+      background: var(--magenta);
     }
 
     .cursor {
@@ -85,6 +125,7 @@
     }
 
     .journal {
+      color: var(--yellow);
       font-style: italic;
     }
 
@@ -94,9 +135,9 @@
 
     footer {
       margin-top: 48px;
-      padding-top: 8px;
-      border-top: 1px solid #1f8a0b;
-      color: #27b30e;
+      padding: 2px 8px;
+      background: var(--fg);
+      color: var(--bg);
       font-size: 13px;
     }
   </style>
@@ -109,10 +150,10 @@
     <p class="subtitle">Coastal engineering · Computational fluid dynamics</p>
 
     <nav class="links" aria-label="Main navigation">
-      [<a href="resume-2.pdf" target="_blank" rel="noopener noreferrer">cv.pdf</a>]
-      [<a href="#publications">publications</a>]
-      [<a href="#affiliations">affiliations</a>]
-      [<a href="#civilflood">civilflood</a>]
+      [<a class="file" href="resume-2.pdf" target="_blank" rel="noopener noreferrer">cv.pdf</a>]
+      [<a class="dir" href="#publications">publications/</a>]
+      [<a class="dir" href="#affiliations">affiliations/</a>]
+      [<a class="file" href="#civilflood">civilflood.txt</a>]
     </nav>
 
     <p class="links">
@@ -125,7 +166,7 @@
 
   <main>
     <section>
-      <h2><span class="prompt">~ $</span> whoami</h2>
+      <h2><span class="user">stefano@civilflood</span>:<span class="path">~</span>$ <span class="cmd">whoami</span></h2>
 
       <p>
         I work on numerical solutions for civil flooding, infrastructure
@@ -137,13 +178,13 @@
     </section>
 
     <section id="publications">
-      <h2><span class="prompt">~ $</span> ls publications/</h2>
+      <h2><span class="user">stefano@civilflood</span>:<span class="path">~</span>$ <span class="cmd">ls publications/</span></h2>
 
       <ul>
         <li>
           <a href="https://doi.org/10.1016/j.jenvman.2026.129590" target="_blank" rel="noopener noreferrer">Observed nitrogen accumulation during salinity and temperature surges in a coastal dam controlled lake</a>.
           <span class="journal">Journal of Environmental Management</span>.
-          <span class="extra">[<a href="obs-nitro.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
+          <span class="extra">[<a class="file" href="obs-nitro.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
         </li>
 
         <li>
@@ -161,25 +202,25 @@
         <li>
           <a href="https://www.sciencedirect.com/science/article/pii/S0141118726001835" target="_blank" rel="noopener noreferrer">Investigation of wave interaction with partially submerged wave screens</a>.
           <span class="journal">Applied Ocean Research</span>.
-          <span class="extra">[<a href="wave-screens.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
+          <span class="extra">[<a class="file" href="wave-screens.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
         </li>
 
         <li>
           <a href="https://www.sciencedirect.com/science/article/pii/S0029801826037546" target="_blank" rel="noopener noreferrer">A wave-generation boundary deficit dominates a multi-event assessment of 1D XBeach non-hydrostatic</a>.
           <span class="journal">Ocean Engineering</span>.
-          <span class="extra">[<a href="xbeach-deficit.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
+          <span class="extra">[<a class="file" href="xbeach-deficit.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
         </li>
 
         <li>
           <a href="https://www.sciencedirect.com/science/article/pii/S0272771426004038" target="_blank" rel="noopener noreferrer">Source aware screening of long term salinity trends in public estuarine and coastal monitoring records</a>.
           <span class="journal">Estuarine, Coastal and Shelf Science</span>.
-          <span class="extra">[<a href="salinity.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
+          <span class="extra">[<a class="file" href="salinity.pdf" target="_blank" rel="noopener noreferrer">pdf</a>]</span>
         </li>
       </ul>
     </section>
 
     <section id="affiliations">
-      <h2><span class="prompt">~ $</span> ls affiliations/</h2>
+      <h2><span class="user">stefano@civilflood</span>:<span class="path">~</span>$ <span class="cmd">ls affiliations/</span></h2>
 
       <ul>
         <li>
@@ -195,7 +236,7 @@
     </section>
 
     <section id="civilflood">
-      <h2><span class="prompt">~ $</span> cat civilflood.txt</h2>
+      <h2><span class="user">stefano@civilflood</span>:<span class="path">~</span>$ <span class="cmd">cat civilflood.txt</span></h2>
 
       <p>
         Tailored numerical models and engineering consulting for flooding,
@@ -208,7 +249,7 @@
   </main>
 
   <footer>
-    -- stefano@civilflood:~ · © 2026 Stefano Biondi --
+    [0] stefano@civilflood:~ · © 2026 Stefano Biondi
   </footer>
 
 </body>
