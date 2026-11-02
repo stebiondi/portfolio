@@ -22,6 +22,11 @@
       line-height: 1.55;
     }
 
+    ::selection {
+      color: #000000;
+      background: #39ff14;
+    }
+
     a {
       color: #39ff14;
     }
@@ -38,9 +43,7 @@
 
     h2 {
       margin: 40px 0 12px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid #1f8a0b;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     p {
@@ -56,8 +59,25 @@
       margin-bottom: 14px;
     }
 
+    .prompt,
     .subtitle {
       color: #27b30e;
+    }
+
+    .cursor {
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor {
+        animation: none;
+      }
     }
 
     .links {
@@ -74,6 +94,8 @@
 
     footer {
       margin-top: 48px;
+      padding-top: 8px;
+      border-top: 1px solid #1f8a0b;
       color: #27b30e;
       font-size: 13px;
     }
@@ -83,11 +105,17 @@
 <body>
 
   <header>
-    <h1>Stefano Biondi</h1>
+    <h1>Stefano Biondi<span class="cursor" aria-hidden="true">█</span></h1>
     <p class="subtitle">Coastal engineering · Computational fluid dynamics</p>
 
+    <nav class="links" aria-label="Main navigation">
+      [<a href="resume-2.pdf" target="_blank" rel="noopener noreferrer">cv.pdf</a>]
+      [<a href="#publications">publications</a>]
+      [<a href="#affiliations">affiliations</a>]
+      [<a href="#civilflood">civilflood</a>]
+    </nav>
+
     <p class="links">
-      <a href="resume-2.pdf" target="_blank" rel="noopener noreferrer">CV</a> ·
       <a href="https://scholar.google.com/citations?user=fFZHqVsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> ·
       <a href="https://www.linkedin.com/in/stefano-biondi-cfd" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
       <a href="https://orcid.org/0009-0001-5737-6012" target="_blank" rel="noopener noreferrer">ORCID</a> ·
@@ -97,6 +125,8 @@
 
   <main>
     <section>
+      <h2><span class="prompt">~ $</span> whoami</h2>
+
       <p>
         I work on numerical solutions for civil flooding, infrastructure
         resilience, and environmental systems. My work combines
@@ -107,7 +137,7 @@
     </section>
 
     <section id="publications">
-      <h2>Publications</h2>
+      <h2><span class="prompt">~ $</span> ls publications/</h2>
 
       <ul>
         <li>
@@ -149,7 +179,7 @@
     </section>
 
     <section id="affiliations">
-      <h2>Affiliations</h2>
+      <h2><span class="prompt">~ $</span> ls affiliations/</h2>
 
       <ul>
         <li>
@@ -165,7 +195,7 @@
     </section>
 
     <section id="civilflood">
-      <h2>CivilFlood</h2>
+      <h2><span class="prompt">~ $</span> cat civilflood.txt</h2>
 
       <p>
         Tailored numerical models and engineering consulting for flooding,
@@ -178,7 +208,7 @@
   </main>
 
   <footer>
-    © 2026 Stefano Biondi
+    -- stefano@civilflood:~ · © 2026 Stefano Biondi --
   </footer>
 
 </body>
